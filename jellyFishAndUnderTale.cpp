@@ -10,13 +10,13 @@ int main()
     {
         int a, b, n;
         cin >> a >> b >> n;
-        vector<int> tools(n);
+        vector<int> nums(n);
         for (int i = 0; i < n; i++)
-            cin >> tools[i];
+            cin >> nums[i];
         long long ans = 0;
-        for (int tool : tools)
-            ans += min(tool, a);
-        cout << b + ans - 1 << endl;
+        for (int i = 0; i < n; i++)
+            ans += min(nums[i], a - 1);
+        cout << ans + b << endl;
     }
     return 0;
 }
