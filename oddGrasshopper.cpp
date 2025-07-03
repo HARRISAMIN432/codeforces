@@ -10,8 +10,22 @@ int main()
     {
         long long x, n;
         cin >> x >> n;
-        int pn = n % 4;
-        (n == 0) ? cout << x << endl : ((x & 1) ? ((pn == 2) ? (cout << (x + n - 1 - n) << endl) : ((pn == 1) ? cout << x + n << endl : cout << x + n - 2 - n + 1 - n << endl)) : (pn == 2) ? (cout << (x - n + 1 + n) << endl) : ((pn == 1) ? cout << x - n << endl : cout << x - n + 2 + n - 1 + n << endl));
+        long long pn = n % 4;
+        if (pn == 0)
+            cout << x << endl;
+        else if (pn == 1)
+            (x & 1) ? cout << x + n << endl : cout << x - n << endl;
+        else if (pn == 2)
+        {
+            (x & 1) ? x += n - 1 : x -= n - 1;
+            (x & 1) ? cout << x + n << endl : cout << x - n << endl;
+        }
+        else
+        {
+            (x & 1) ? x += n - 2 : x -= n - 2;
+            (x & 1) ? x += n - 1 : x -= n - 1;
+            (x & 1) ? cout << x + n << endl : cout << x - n << endl;
+        }
     }
     return 0;
 }
