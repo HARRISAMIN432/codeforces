@@ -13,7 +13,8 @@ int main()
         vector<int> nums(n);
         for (int i = 0; i < n; i++)
             cin >> nums[i];
-        int j = 0, ans = 0;
+        int j = 0;
+        long long ans = 0;
         for (int i = 0; i < n; i++)
         {
             if (nums[i] > q)
