@@ -7,6 +7,7 @@
         "cstdlib": "cpp",
         "unordered_map": "cpp",
         "numeric": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "utility": "cpp"
     }
 }
